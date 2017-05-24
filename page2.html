@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<style type="text/css">
+    body{
+        background-image: url('b1.jpg');
+        background-repeat: no-repeat;
+    }
+    input[type="text"], input[type="email"], input[type="tel"], input[type="password"], input[type="phone"] {
+    width: 400px;
+    position: relative;
+    z-index: 99;
+    background-color: transparent;
+    -webkit-border-radius: 0px;
+    border-radius: 0px;
+    background-clip: padding-box;
+    box-shadow: none;
+    outline: none;
+    padding: 5px 10px;
+    height: 30px;
+    line-height: 30px;
+    border:1px solid grey;
+    margin: 10px;
+}
+select, textarea {
+    width: 420px;
+    position: relative;
+    z-index: 99;
+    background-color: transparent;
+    -webkit-border-radius: 0px;
+    border-radius: 0px;
+    background-clip: padding-box;
+    box-shadow: none;
+    outline: none;
+    padding: 5px 10px;
+    height: 30px;
+    line-height: 30px;
+    border:1px solid grey;
+    margin: 10px;
+}
+
+</style>
+<br><br><br><br><br><br><br>
+<center>
+    <div style="background-color: white;max-width: 80%;box-shadow: 0 0.3em 1em #000;border-top: 3px solid #DC5041;color: grey;font-weight: bold;font-family: monospace;">
+<div class="page-wrapper">
+    <div class="content bg-reg">
+        <div class="container registration-page">
+            <div class="page-title">Application for Co-Working Space at <strong style=" color: #ee4a23; font-weight: bold;">Catalyst</strong><br><span>Top notch infrastructure &amp; great environment! Get access to new launches, deals &amp; discounts on professional services</span></div>
+            <div class="registration-process co-working">
+                <div class="c-account">
+                    <form action="/company/coworking" method="post">
+                        <div class="basic">
+                            <h5>Experience</h5>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="field-name">How many years of Startup experience do you have?</div>
+                                    <select class="select-options" id="id_exp_years" name="exp_years">
+<option value="Select an option">Select an option</option>
+<option value="None">None</option>
+<option value="Less than a year">Less than a year</option>
+<option value="1 - 5 years">1 - 5 years</option>
+<option value="More than 5 years">More than 5 years</option>
+</select>
+                                    <span class="err msg">  </span>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="field-name">What is your role at the startup?</div>
+                                    <select class="select-options" id="id_role" name="role">
+<option value="Select an option">Select an option</option>
+<option value="CEO">CEO</option>
+<option value="Co-Founder">Co-Founder</option>
+<option value="MD">MD</option>
+<option value="Employee">Employee</option>
+<option value="Investor">Investor</option>
+</select>
+                                    <span class="err msg">
+                                        
+                                    </span>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="field-name">Are you working full time on this venture?</div>
+                                    <select class="select-options" id="id_full_time" name="full_time">
+<option value="Select an option">Select an option</option>
+<option value="Yes">Yes</option>
+<option value="No">No</option>
+</select>
+                                    <span class="err msg">  </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="basic team">
+                            <h5>Team info</h5>
+                            <div class="row">
+                                <div class="col-md-5">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="field-name">Number of co-founders</div>
+                                            <select class="select-options" id="id_no_cofounders" name="no_cofounders">
+<option value="Select an option">Select an option</option>
+<option value="0">0</option>
+<option value="1">1</option>
+<option value="2 or more">2 or more</option>
+</select>
+                                            <span class="err msg">
+                                                
+                                            </span>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div class="field-name">Number of team members<br/><span>Excluding co-founders</span></div>
+                                            <input class="form-control" id="id_no_coreteam" name="no_coreteam" type="text" />
+                                            <span class="err msg">
+                                                
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-7">
+                                    <div class="field-name">Do you plan to hire more people? Explain their roles <span>Less than 50 words</span></div>
+                                    <textarea class="c-height" cols="40" id="id_add_hire" name="add_hire" rows="10">
+</textarea>
+                                    <span class="err msg">
+                                        
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="basic">
+                            <h5>Industry sectors</h5>
+                            <div class="row">
+                                <div class="col-md-12"><div class="field-name">Which sector does your startup belong to?</div></div>
+                                <div class="col-md-12"><span class="err msg"></span></div>
+                                <div class="col-md-12">
+                                    <label for="fitness" class="sector_label fitness">
+                                        <div class="box">
+                                            <span class="name">FINTECH</span>
+                                            <input type="checkbox" name="sector" value="fintech" id="fitness" class="badgebox">
+                                            
+                                        </div>
+                                    </label>
+                                    <label for="health" class="sector_label health">
+                                        <div class="box">
+                                            <span class="name">HEALTHTECH</span>
+                                            <input type="checkbox" name="sector" value="health" id="health" class="badgebox">
+                                            
+                                        </div>
+                                    </label>
+                                    <label for="agritech" class="sector_label agritech">
+                                        <div class="box">
+                                            <span class="name">AGRITECH</span>
+                                            <input type="checkbox" name="sector" value="agritech" id="agritech" class="badgebox">
+                                            
+                                        </div>
+                                    </label>
+                                    <label for="sustain" class="sector_label sustain">
+                                        <div class="box">
+                                            <span class="name">SUSTAINABILITY</span>
+                                            <input type="checkbox" name="sector" value="sustainability" id="sustain" class="badgebox">
+                                            
+                                        </div>
+                                    </label>
+                                    <label for="social" class="sector_label social">
+                                        <div class="box">
+                                            <span class="name">SOCIAL</span>
+                                            <input type="checkbox" name="sector" value="social" id="social" class="badgebox">
+                                            
+                                        </div>
+                                    </label>
+                                    <label for="transport" class="sector_label transport">
+                                        <div class="box">
+                                            <span class="name">TRANSPORTATION</span>
+                                            <input type="checkbox" name="sector" value="transportation" id="transport" class="badgebox">
+                                           
+                                        </div>
+                                    </label>
+                                    <label for="smart" class="sector_label smart">
+                                        <div class="box">
+                                            <span class="name">SMART CITIES</span>
+                                            <input type="checkbox" name="sector" value="smartcities" id="smart" class="badgebox">
+                                            
+                                        </div>
+                                    </label>
+                                    <label for="edtech" class="sector_label edtech">
+                                        <div class="box">
+                                            <span class="name">EDTECH</span>
+                                            <input type="checkbox" name="sector" value="edtech" id="edtech" class="badgebox">
+                                           
+                                        </div>
+                                    </label>
+                                </div>
+                                <div class="col-md-12"><div class="field-name">Select sub-sectors</div></div>
+                                <div class="col-md-12"><span class="err msg"></span></div>
+                                <div class="col-md-12">
+    <div class="sub-sectors-container">
+        <span class="non-sel" style="display: table;">Nothing Selected</span>
+        <div class="sub-sectors fintech">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="field-name">FINTECH<span>(6 of 12 Selected)</span></div>
+                </div>
+                <div class="col-md-12">
+                    <div class="select-some">
+                        <span><input id="mobile-payments" type="checkbox" name="subsector" value="mobile-payments" class="badgebox"> <label for="mobile-payments">Mobile Payments</label></span>
+                        <span><input id="banking-tech" type="checkbox" name="subsector" value="banking-tech" class="badgebox"> <label for="banking-tech">Banking Tech</label></span>
+                        <span><input id="alternative-lending" type="checkbox" name="subsector" value="alternative-lending" class="badgebox"> <label for="alternative-lending">Alternative Lending</label></span>
+                        <span><input id="payments" type="checkbox" name="subsector" value="payments" class="badgebox"> <label for="payments">payments</label></span>
+                        <span><input id="insurance-tech" type="checkbox" name="subsector" value="insurance-tech" class="badgebox"> <label for="insurance-tech">Insurance Tech</label></span>
+                        <span><input id="investment-tech" type="checkbox" name="subsector" value="investment-tech" class="badgebox"> <label for="investment-tech">Investment Tech</label></span>
+                        <span><input id="software-investors" type="checkbox" name="subsector" value="software-investors" class="badgebox"> <label for="software-investors">Software for Institutional Investors</label></span>
+                        <span><input id="consumer-finance" type="checkbox" name="subsector" value="consumer-finance" class="badgebox"> <label for="consumer-finance">Consumer Finance</label></span>
+                        <span><input id="enterprise-finance" type="checkbox" name="subsector" value="enterprise-finance" class="badgebox"> <label for="enterprise-finance">Enterprise Finance</label></span>
+                        <span><input id="crowdfunding" type="checkbox" name="subsector" value="crowdfunding" class="badgebox"> <label for="crowdfunding">Crowdfunding</label></span>
+                        <span><input id="cryptocurrency" type="checkbox" name="subsector" value="cryptocurrency" class="badgebox"> <label for="cryptocurrency">Cryptocurrency</label></span>
+                        <span><input id="forex" type="checkbox" name="subsector" value="forex" class="badgebox"> <label for="forex">Forex</label></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="sub-sectors healthtech">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="field-name">HEALTHTECH INDIA <span>(6 of 12 Selected)</span></div>
+                </div>
+                <div class="col-md-12">
+                    <div class="select-some">
+                        <span><input id="personal-health" type="checkbox" name="subsector" value="personal-health" class="badgebox"> <label for="personal-health">Personal Health Management</label></span>
+                        <span><input id="healthcare-discovery" type="checkbox" name="subsector" value="healthcare-discovery" class="badgebox"> <label for="healthcare-discovery">Healthcare Discovery</label></span>
+                        <span><input id="healthcare-delivery" type="checkbox" name="subsector" value="healthcare-delivery" class="badgebox"> <label for="healthcare-delivery">Healthcare Delivery</label></span>
+                        <span><input id="ecommerce" type="checkbox" name="subsector" value="ecommerce" class="badgebox"> <label for="ecommerce">Ecommerce</label></span>
+                        <span><input id="diagnostics" type="checkbox" name="subsector" value="diagnostics" class="badgebox"> <label for="diagnostics">Diagnostics</label></span>
+                        <span><input id="medical-tourism" type="checkbox" name="subsector" value="medical-tourism" class="badgebox"> <label for="medical-tourism">Medical Tourism Facilitator</label></span>
+                        <span><input id="fitness1" type="checkbox" name="subsector" value="fitness1" class="badgebox"> <label for="fitness1">Fitness</label></span>
+                        <span><input id="preventive-care" type="checkbox" name="subsector" value="preventive-care" class="badgebox"> <label for="preventive-care">Preventive Care</label></span>
+                        <span><input id="enterprise" type="checkbox" name="subsector" value="enterprise" class="badgebox"> <label for="enterprise">Enterprise</label></span>
+                        <span><input id="biotechnology" type="checkbox" name="subsector" value="biotechnology" class="badgebox"> <label for="biotechnology">Biotechnology</label></span>
+                        <span><input id="genomics" type="checkbox" name="subsector" value="genomics" class="badgebox"> <label for="genomics">Genomics</label></span>
+                        <span><input id="medical-devices" type="checkbox" name="subsector" value="medical-devices" class="badgebox"> <label for="medical-devices">Medical Devices</label></span>
+                        <span><input id="therapeutics" type="checkbox" name="subsector" value="therapeutics" class="badgebox"> <label for="therapeutics">Therapeutics</label></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="sub-sectors agritech">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="field-name">AGRITECH <span>(6 of 12 Selected)</span></div>
+                </div>
+                <div class="col-md-12">
+                    <div class="select-some">
+                        <span><input id="engineering-technology" type="checkbox" name="subsector" value="engineering-technology" class="badgebox"> <label for="engineering-technology">Engineering Technology</label></span>
+                        <span><input id="infrastructure" type="checkbox" name="subsector" value="infrastructure" class="badgebox"> <label for="infrastructure">Infrastructure</label></span>
+                        <span><input id="r-d" type="checkbox" name="subsector" value="r-d" class="badgebox"> <label for="r-d">R&amp;D</label></span>
+                        <span><input id="processing-machinery" type="checkbox" name="subsector" value="processing-machinery" class="badgebox"> <label for="processing-machinery">Processing Machinery</label></span>
+                        <span><input id="agriculture-marketing" type="checkbox" name="subsector" value="agriculture-marketing" class="badgebox"> <label for="agriculture-marketing">Agriculture Marketing</label></span>
+                        <span><input id="commerce" type="checkbox" name="subsector" value="commerce" class="badgebox"> <label for="commerce">Commerce</label></span>
+                        <span><input id="agro-processing" type="checkbox" name="subsector" value="agro-processing" class="badgebox"> <label for="agro-processing">Agro Processing</label></span>
+                        <span><input id="faas" type="checkbox" name="subsector" value="faas" class="badgebox"> <label for="faas">FaaS</label></span>
+                        <span><input id="seeds" type="checkbox" name="subsector" value="seeds" class="badgebox"> <label for="seeds">Seeds</label></span>
+                        <span><input id="agrochemicals" type="checkbox" name="subsector" value="agrochemicals" class="badgebox"> <label for="agrochemicals">Agrochemicals</label></span>
+                        <span><input id="software" type="checkbox" name="subsector" value="software" class="badgebox"> <label for="software">Software</label></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="sub-sectors sustainability">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="field-name">SUSTAINABILITY <span>(3 of 6 Selected)</span></div>
+                </div>
+                <div class="col-md-12">
+                    <div class="select-some">
+                        <span><input id="horizontal" type="checkbox" name="subsector" value="horizontal" class="badgebox"> <label for="horizontal">Horizontal</label></span>
+                        <span><input id="bio-energy" type="checkbox" name="subsector" value="bio-energy" class="badgebox"> <label for="bio-energy">Bio Energy</label></span>
+                        <span><input id="solar-energy" type="checkbox" name="subsector" value="solar-energy" class="badgebox"> <label for="solar-energy">Solar Energy</label></span>
+                        <span><input id="hydel-energy" type="checkbox" name="subsector" value="hydel-energy" class="badgebox"> <label for="hydel-energy">Hydel Energy</label></span>
+                        <span><input id="waste-management" type="checkbox" name="subsector" value="waste-management" class="badgebox"> <label for="waste-management">Waste Management</label></span>
+                        <span><input id="water-management" type="checkbox" name="subsector" value="water-management" class="badgebox"> <label for="water-management">Water Management</label></span>
+                        <span><input id="electric-vehicles" type="checkbox" name="subsector" value="electric-vehicles" class="badgebox"> <label for="electric-vehicles">Electric Vehicles</label></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="sub-sectors social">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="field-name">SOCIAL <span>(3 of 6 Selected)</span></div>
+                </div>
+                <div class="col-md-12">
+                    <div class="select-some">
+                        <span><input id="edtech" type="checkbox" name="subsector" value="edtech" class="badgebox"> <label for="edtech">Impact companies in EdTech</label></span>
+                        <span><input id="health-tech" type="checkbox" name="subsector" value="health-tech" class="badgebox"> <label for="health-tech">Impact companies in HealthTech</label></span>
+                        <span><input id="agritech" type="checkbox" name="subsector" value="agritech" class="badgebox"> <label for="agritech">Impact companies in AgriTech</label></span>
+                        <span><input id="impact-energy" type="checkbox" name="subsector" value="impact-energy" class="badgebox"> <label for="impact-energy">Impact companies in Energy</label></span>
+                        <span><input id="not-organization" type="checkbox" name="subsector" value="not-organization" class="badgebox"> <label for="not-organization">Not for profit organization</label></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="sub-sectors transportation">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="field-name">TRANSPORTATION <span>(3 of 6 Selected)</span></div>
+                </div>
+                <div class="col-md-12">
+                    <div class="select-some">
+                        <span><input id="horizontal1" type="checkbox" name="subsector" value="horizontal1" class="badgebox"> <label for="horizontal1">Horizontal</label></span>
+                        <span><input id="cars" type="checkbox" name="subsector" value="cars" class="badgebox"> <label for="cars">Cars</label></span>
+                        <span><input id="bikes" type="checkbox" name="subsector" value="bikes" class="badgebox"> <label for="bikes">bikes</label></span>
+                        <span><input id="bus" type="checkbox" name="subsector" value="bus" class="badgebox"> <label for="bus">bus</label></span>
+                        <span><input id="automobile-servicing" type="checkbox" name="subsector" value="automobile-servicing" class="badgebox"> <label for="automobile-servicing">Automobile Servicing</label></span>
+                        <span><input id="exchange-platform" type="checkbox" name="subsector" value="exchange-platform" class="badgebox"> <label for="exchange-platform">Exchange Platform</label></span>
+                        <span><input id="financing-network" type="checkbox" name="subsector" value="financing-network" class="badgebox"> <label for="financing-network">Financing Network</label></span>
+                        <span><input id="logistics-platform" type="checkbox" name="subsector" value="logistics-platform" class="badgebox"> <label for="logistics-platform">Logistics Platform</label></span>
+                        <span><input id="last-mile-delivery" type="checkbox" name="subsector" value="last-mile-delivery" class="badgebox"> <label for="last-mile-delivery">Last Mile Delivery</label></span>
+                        <span><input id="storage" type="checkbox" name="subsector" value="storage" class="badgebox"> <label for="storage">Storage</label></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="sub-sectors smart-cities">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="field-name">SMART CITIES <span>(3 of 6 Selected)</span></div>
+                </div>
+                <div class="col-md-12">
+                    <div class="select-some">
+                        <span><input id="urban-monitoring" type="checkbox" name="subsector" value="urban-monitoring" class="badgebox"> <label for="urban-monitoring">Urban Monitoring &amp; Management</label></span>
+                        <span><input id="infrastructure" type="checkbox" name="subsector" value="infrastructure" class="badgebox"> <label for="infrastructure">Infrastructure</label></span>
+                        <span><input id="bikes1" type="checkbox" name="subsector" value="bikes1" class="badgebox"> <label for="bikes1">bikes</label></span>
+                        <span><input id="urban-mobility" type="checkbox" name="subsector" value="urban-mobility" class="badgebox"> <label for="urban-mobility">Urban Mobility</label></span>
+                        <span><input id="network-provider" type="checkbox" name="subsector" value="network-provider" class="badgebox"> <label for="network-provider">Network Provider</label></span>
+                        <span><input id="data-storage" type="checkbox" name="subsector" value="data-storage" class="badgebox"> <label for="data-storage">Data Storage, Analysis &amp; Planning.</label></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="sub-sectors edtech">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="field-name">EDTECH <span>(3 of 6 Selected)</span></div>
+                </div>
+                <div class="col-md-12">
+                    <div class="select-some">
+                        <span><input id="k-schools" type="checkbox" name="subsector" value="k-schools" class="badgebox"> <label for="k-schools">K12 Schools</label></span>
+                        <span><input id="marketplaces" type="checkbox" name="subsector" value="marketplaces" class="badgebox"> <label for="marketplaces">Marketplaces</label></span>
+                        <span><input id="learning-tools" type="checkbox" name="subsector" value="learning-tools" class="badgebox"> <label for="learning-tools">Learning Tools</label></span>
+                        <span><input id="professional-courses" type="checkbox" name="subsector" value="professional-courses" class="badgebox"> <label for="professional-courses">Professional Courses</label></span>
+                        <span><input id="e-learning" type="checkbox" name="subsector" value="e-learning" class="badgebox"> <label for="e-learning">e -Learning</label></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+                            </div>
+                        </div>
+                        <div class="basic start-up">
+                            <h5>Start-up Info</h5>
+
+
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="field-name">Please give a one line description of your company.<br/><span>Less than 20 words</span></div>
+
+                                           <textarea class="c-height" cols="40" id="id_mission_statement" name="mission_statement" placeholder="Eg. Freshdesk is a customer service support helpdesk." rows="10">
+</textarea>
+                                           <span class="err msg">
+                                                
+                                            </span>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="field-name">Describe your business and problem statement.<br/><span>Less than 75 words</span></div>
+                                            <textarea class="c-height" cols="40" id="id_desc_business" name="desc_business" rows="10">
+</textarea>
+                                            <span class="err msg">
+                                                
+                                            </span>
+                                        </div>
+                                    </div>
+
+                            <div class="row">
+                                <div class="col-md-12">
+                                <div class="field-name">List three local competitors and three global competitors.</div>
+                                <textarea class="c-height" cols="40" id="id_competitors" name="competitors" placeholder="Please mention either the names or give the url of the companies. If none, please mention N/A." rows="10">
+</textarea>
+                                <span class="err msg">  </span>
+                                </div>
+                                <div class="col-md-12">
+                                            <div class="field-name">At which stage is your startup in?</div>
+                                            <select class="select-options" id="id_lifecycle_stage" name="lifecycle_stage">
+<option value="Select an option">Select an option</option>
+<option value="Ideation">Ideation</option>
+<option value="Conception">Conception</option>
+<option value="Committment">Committment</option>
+<option value="Validation">Validation</option>
+<option value="Launch">Launch</option>
+<option value="Scaling">Scaling</option>
+<option value="Establishing">Establishing</option>
+</select>
+                                            <span class="err msg">
+                                                
+                                            </span>
+                                        </div>
+                            </div>
+                        </div>
+                        <div class="basic diff">
+                            <h5>Differentiability</h5>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="field-name">Is your solution unique?</div>
+                                    <select class="select-options" id="id_sol_unique" name="sol_unique">
+<option value="Select an option">Select an option</option>
+<option value="No">No</option>
+<option value="Yes, no such idea exists.">Yes, no such idea exists.</option>
+<option value="The idea has roots in existing solutions but is executed differently">The idea has roots in existing solutions but is executed differently</option>
+</select>
+                                    <span class="err msg">
+                                        
+                                    </span>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="field-name">If no, what are the competetive advantages?</div>
+                                    <select class="select-options" id="id_not_unique" name="not_unique">
+<option value="Select an option">Select an option</option>
+<option value="No advantages, it&#39;s an alternative to current solutions">No advantages, it&#39;s an alternative to current solutions</option>
+<option value="The product is cheaper.">The product is cheaper.</option>
+<option value="The current solutions are non-tech but my idea is tech-based.">The current solutions are non-tech but my idea is tech-based.</option>
+<option value="Not applicable">Not applicable</option>
+</select>
+                                    <span class="err msg">
+                                        
+                                    </span>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="field-name">Is there any intellectual property involved?</div>
+                                    <select class="select-options" id="id_ip_involved" name="ip_involved">
+<option value="Select an option">Select an option</option>
+<option value="Patent Granted">Patent Granted</option>
+<option value="Patent Pending">Patent Pending</option>
+<option value="Planning to file">Planning to file</option>
+<option value="No">No</option>
+<option value="Non-patentable">Non-patentable</option>
+</select>
+                                    <span class="err msg">
+                                        
+                                    </span>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="field-name">What are the entry barriers you have put in place for your competitors?</div>
+                                    <select class="select-options" id="id_barriers" name="barriers">
+<option value="Select an option">Select an option</option>
+<option value="Technology barriers">Technology barriers</option>
+<option value="Geographic barriers">Geographic barriers</option>
+<option value="Product production cost">Product production cost</option>
+<option value="Distribution barriers">Distribution barriers</option>
+<option value="Product is supported by a government entity">Product is supported by a government entity</option>
+<option value="Product is backed by a corporate">Product is backed by a corporate</option>
+</select>
+                                    <span class="err msg">  </span>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="field-name">Who is your potential customer and why?<br/><span>Less than 50 words</span></div>
+                                    <textarea class="c-height" cols="40" id="id_potential_customer" name="potential_customer" placeholder="Eg: Name of a major client who could use this product." rows="10">
+</textarea>
+                                    <span class="err msg">
+                                        
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="basic market">
+                            <h5>Market demographics</h5>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="field-name">Nature of startup</div>
+                                    <select class="select-options" id="id_startup_nature" name="startup_nature">
+<option value="Select an option">Select an option</option>
+<option value="Business to business">Business to business</option>
+<option value="Business to customers">Business to customers</option>
+<option value="B2B2C">B2B2C</option>
+<option value="Business to Government">Business to Government</option>
+<option value="Consumer to Consumer">Consumer to Consumer</option>
+</select>
+                                    <span class="err msg">  </span>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="field-name">Geographic target area</div>
+                                    <select class="select-options" id="id_geo_target" name="geo_target">
+<option value="Select an option">Select an option</option>
+<option value="Locally in my city">Locally in my city</option>
+<option value="Locally in my country">Locally in my country</option>
+<option value="To neighboring countries">To neighboring countries</option>
+<option value="Internationally">Internationally</option>
+</select>
+                                    <span class="err msg"></span>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="field-name">Total addressable market <span>No. of potential customers</span></div>
+                                    <select class="select-options" id="id_addressable_market" name="addressable_market">
+<option value="Select an option">Select an option</option>
+<option value="Less than 10,000">Less than 10,000</option>
+<option value="10,000 - 100,000">10,000 - 100,000</option>
+<option value="100,000 - 1 million">100,000 - 1 million</option>
+<option value="1 million - 10 million">1 million - 10 million</option>
+<option value="10 million +">10 million +</option>
+</select>
+                                    <span class="err msg">
+                                        
+                                    </span>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="field-name">What percentage of your target population do you predict to acquire?</div>
+                                    <select class="select-options" id="id_target_population" name="target_population">
+<option value="Select an option">Select an option</option>
+<option value="Less than 15%">Less than 15%</option>
+<option value="15 % - 30 %">15 % - 30 %</option>
+<option value="30 % - 50%">30 % - 50%</option>
+<option value="50 % - 75%">50 % - 75%</option>
+<option value="75% - 90%">75% - 90%</option>
+</select>
+                                    <span class="err msg">
+                                        
+                                    </span>
+                                </div>
+                                <div class="col-md-6">&nbsp;</div>
+                                <div class="col-md-6"></div>
+                                <div class="col-md-6" style="clear:left;">
+                                    <div class="field-name">What is the predicted unit cost of the product at this stage? Do you have any differential pricing? <br/><span>Less than 100 words</span></div>
+                                    <textarea class="c-height" cols="40" id="id_unit_cost" name="unit_cost" rows="10">
+</textarea>
+                                    <span class="err msg">  </span>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="field-name margin-top">How did you derive the unit cost?<br/><span>Less than 100 words</span></div>
+                                    <textarea class="c-height" cols="40" id="id_desc_unit_cost" name="desc_unit_cost" rows="10">
+</textarea>
+                                    <span class="err msg">
+                                        
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="basic funding">
+                            <h5>Funding</h5>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="field-name">What is your current source of funding?</div>
+                                    <select class="select-options" id="id_funding_source" name="funding_source">
+<option value="Select an option">Select an option</option>
+<option value="Bootstrap">Bootstrap</option>
+<option value="Friends &amp; Family">Friends &amp; Family</option>
+<option value="Seed Funding">Seed Funding</option>
+<option value="Series A">Series A</option>
+<option value="Funding from Govt">Funding from Govt</option>
+<option value="Won a competiton">Won a competiton</option>
+<option value="Crowd funding">Crowd funding</option>
+</select>
+                                    <span class="err msg">  </span>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="field-name">How much funding have you raised so far? (in USD)</div>
+                                    <select class="select-options" id="id_funding_raised" name="funding_raised">
+<option value="Select an option">Select an option</option>
+<option value="&lt;10,000">&lt;10,000</option>
+<option value="10,000 -50,000">10,000 -50,000</option>
+<option value="50,000 -100,000">50,000 -100,000</option>
+<option value="100,001-200,000">100,001-200,000</option>
+<option value="200,001-500,000">200,001-500,000</option>
+<option value="500,000-1,000,000">500,000-1,000,000</option>
+<option value="1,000,001 -5,000,000">1,000,001 -5,000,000</option>
+<option value="Above 5,000,000">Above 5,000,000</option>
+</select>
+                                    <span class="err msg">  </span>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="field-name">Of the capital raised, how much do you have left?</div>
+                                            <select class="select-options" id="id_cap_left" name="cap_left">
+<option value="Select an option">Select an option</option>
+<option value="70% to 100%">70% to 100%</option>
+<option value="40% to 70%">40% to 70%</option>
+<option value="10% to 40%">10% to 40%</option>
+<option value="Less than 10%">Less than 10%</option>
+<option value="0%">0%</option>
+</select>
+                                            <span class="err msg">
+                                                
+                                            </span>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div class="field-name">What is your monthly burn rate? (in USD)</div>
+                                            <input class="form-control" id="id_burn_rate" name="burn_rate" type="text" />
+                                            <span class="err msg">  </span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="field-name">Mention your current investors and equity dilution. (in USD)</div>
+                                    <textarea class="c-height" cols="40" id="id_cap_structure" name="cap_structure" rows="10">
+</textarea>
+                                    <span class="err msg">  </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="basic traction">
+                            <h5>Traction</h5>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="field-name">Do you have a minimum viable product?</div>
+                                    <select class="select-options" id="id_mvp" name="mvp">
+<option value="Select an option">Select an option</option>
+<option value="Yes">Yes</option>
+<option value="No">No</option>
+</select>
+                                    <span class="err msg"></span>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="field-name">If no, when do you predict to have a MVP by?</div>
+                                    <select class="select-options" id="id_no_mvp" name="no_mvp">
+<option value="Select an option">Select an option</option>
+<option value="By end of month">By end of month</option>
+<option value="In 3-6 months">In 3-6 months</option>
+<option value="In a year">In a year</option>
+<option value="More than a year">More than a year</option>
+<option value="Not applicable">Not applicable</option>
+</select>
+                                    <span class="err msg">  </span>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="field-name">How many unpaid customers do you have?<br/><span>Signed up customers who don't pay for your product</span></div>
+                                    <select class="select-options" id="id_unpaid_cusomers" name="unpaid_cusomers">
+<option value="Select an option">Select an option</option>
+<option value="0-10">0-10</option>
+<option value="10-100">10-100</option>
+<option value="100-1000">100-1000</option>
+<option value="1000-5000">1000-5000</option>
+<option value="Above 5000">Above 5000</option>
+</select>
+                                    <span class="err msg">  </span>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="field-name">How many revenue generating customers do you have?<br/><span>Customers that are paying for the product</span></div>
+                                    <select class="select-options" id="id_revenue_cusomers" name="revenue_cusomers">
+<option value="Select an option">Select an option</option>
+<option value="0-10">0-10</option>
+<option value="10-100">10-100</option>
+<option value="100-1000">100-1000</option>
+<option value="1000-5000">1000-5000</option>
+<option value="Above 5000">Above 5000</option>
+</select>
+                                    <span class="err msg">  </span>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="field-name">Average revenue per month (in USD)</div>
+                                            <select class="select-options" id="id_avg_revenue" name="avg_revenue">
+<option value="Select an option">Select an option</option>
+<option value="0-10">0-10</option>
+<option value="10-100">10-100</option>
+<option value="100-1000">100-1000</option>
+<option value="1000-5000">1000-5000</option>
+<option value="Above 5000">Above 5000</option>
+</select>
+                                            <span class="err msg">  </span>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div class="field-name">What is your distribution model? If you have tie ups with distributor, mention in ‘Others’ box.</div>
+                                            <select class="select-options" id="id_distribution_model" name="distribution_model">
+<option value="Select an option">Select an option</option>
+<option value="Mobile &amp; Web based">Mobile &amp; Web based</option>
+<option value="Web based">Web based</option>
+<option value="Mobile based">Mobile based</option>
+<option value="Partnerships with distributors">Partnerships with distributors</option>
+</select>
+                                            <span class="err msg"> </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="field-name">Gross Margin and Net Margin per unit (in USD)</div>
+                                    <textarea class="c-height" cols="40" id="id_margin" name="margin" rows="10">
+</textarea>
+                                    <span class="err msg"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="basic">
+                            <h5>Operating plan</h5>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="field-name">How much do you estimate to spend on sales and marketing in the next 1 year? <span>In USD</span></div>
+                                    <select class="select-options" id="id_sales_budget" name="sales_budget">
+<option value="Select an option">Select an option</option>
+<option value="100 to 1000">100 to 1000</option>
+<option value="1000 to 5000">1000 to 5000</option>
+<option value="5,000 to 10,000">5,000 to 10,000</option>
+<option value="10,000 to 20,000">10,000 to 20,000</option>
+<option value="20,000+">20,000+</option>
+</select>
+                                    <span class="err msg">  </span>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="field-name">How many sales people are you predicting to employ in the next one year?</div>
+                                    <select class="select-options" id="id_sales_people" name="sales_people">
+<option value="Select an option">Select an option</option>
+<option value="None">None</option>
+<option value="Less than 3">Less than 3</option>
+<option value="3 to 8">3 to 8</option>
+<option value="More than 8">More than 8</option>
+</select>
+                                    <span class="err msg">  </span>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="field-name">How do you plan to scale up?<br/><span>Be realistic to your business &amp; sector</span></div>
+                                    <select class="select-options" id="id_scale_up" name="scale_up">
+<option value="Select an option">Select an option</option>
+<option value="Open new stores">Open new stores</option>
+<option value="Expand to new geographies">Expand to new geographies</option>
+<option value="Expand to more verticals">Expand to more verticals</option>
+<option value="Strategic partnerships with Corporates">Strategic partnerships with Corporates</option>
+<option value="Link up with eco-system players">Link up with eco-system players</option>
+<option value="Targeting other audience">Targeting other audience</option>
+<option value="Cutting unit cost of product">Cutting unit cost of product</option>
+</select>
+                                    <span class="err msg">  </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="basic milestones">
+                            <h5>Milestones</h5>
+                            <div class="row">
+                                 <div class="col-md-12">
+                                     <div class="field-name">What are the milestones for your company in the next six months?</div>
+                                     <textarea class="c-height" cols="40" id="id_milestones" name="milestones" rows="10">
+</textarea>
+                                     <span class="err msg"></span>
+                                 </div>
+
+                                        <div class="col-md-12">
+                                            <div class="field-name">How many customers do you predict to acquire in the next one year?</div>
+                                            <select class="select-options" id="id_total_customers" name="total_customers">
+<option value="Select an option">Select an option</option>
+<option value="0">0</option>
+<option value="Less than 100">Less than 100</option>
+<option value="100-1000">100-1000</option>
+<option value="1000 - 5000">1000 - 5000</option>
+<option value="5000 - 10000">5000 - 10000</option>
+<option value="10,000 - 50,000">10,000 - 50,000</option>
+<option value="50,000 +">50,000 +</option>
+</select>
+                                            <span class="err msg">  </span>
+                                        </div>
+
+
+
+
+                            </div>
+                        </div>
+                        <div class="basic milestones">
+                            <h5>Others</h5>
+                            <div class="row">
+                                <div class="col-md-12">
+                                            <div class="field-name">Have you participated in any Tech Competition in the last 24 months?</div>
+                                            <select id="id_tech_comp" name="tech_comp">
+<option value="Select an option">Select an option</option>
+<option value="Yes">Yes</option>
+<option value="No">No</option>
+</select>
+                                            <span class="err msg">  </span>
+                                        </div>
+
+                                <div class="col-md-12">
+                                            <div class="field-name">What was your standing in the competition?</div>
+
+                                            <select id="id_tech_comp_standing" name="tech_comp_standing">
+<option value="Select an option">Select an option</option>
+<option value="Yes">Yes</option>
+<option value="No">No</option>
+</select>
+                                            <span class="err msg"></span>
+                                        </div>
+                                <div class="col-md-12">
+                                            <div class="field-name">Please mention the name of the competition and the main sponsor.</div>
+                                            <textarea cols="40" id="id_tech_comp_details" name="tech_comp_details" rows="10">
+</textarea>
+                                            <span class="err msg">  </span>
+                                        </div>
+
+
+
+                                        <div class="col-md-12">
+                                            <div class="field-name">Where did you hear about us?</div>
+
+                                            <select id="id_source" name="source">
+<option value="Select an option">Select an option</option>
+<option value="Got a Mail">Got a Mail</option>
+<option value="Facebook">Facebook</option>
+<option value="Twitter">Twitter</option>
+<option value="Friends">Friends</option>
+<option value="Visit to T-Hub">Visit to T-Hub</option>
+<option value="Newspapers">Newspapers</option>
+</select>
+                                            <span class="err msg"></span>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div class="field-name">Comments</div>
+                                            <textarea class="c-height" cols="40" id="id_comments" name="comments" rows="10">
+</textarea>
+                                            <span class="err msg">  </span>
+                                        </div>
+
+
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 text-center"><input type="submit" value="Submit" /></div>
+                            <br>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="/static/landing/js/bootstrap.min.js"></script>
+<script>
+$(document).ready(function () {
+  $('input.badgebox').click(function () {
+      var selectVar = $(this).prev().text().toLowerCase();
+      var clickd=selectVar.replace(/\s/g,'-');
+      $(this).parents('span').toggleClass('active');
+       $(this).parents('label').toggleClass('active');
+      $('.sub-sectors-container > .sub-sectors.' + clickd).toggleClass('active');
+
+      if($('.sub-sectors').hasClass('active')){
+          $('.non-sel').hide();
+      }
+      else{
+          $('.non-sel').show();
+      }
+  });
+
+});
+
+</script>
+
+
+
+<center><br>
+<p><i></i> @PVPSIT, VIJAYAWADA, INDIA</p>
+      <p><i></i> Phone: +91 8333021838</p>
+      <p><i> </i> Email: datta.koneru@gmail.com</p>
+      <br>
+
+
+</center>
+</body>
+</html>
